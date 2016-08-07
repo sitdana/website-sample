@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %}Project Description{% endblock %}
+
+{% block content %}
+<div class="container">
+	<h1>Project Description</h1>
+	<hr />
+	<h2>Data Source</h2>
+	<p>The data for this project come from the <a href="https://collegescorecard.ed.gov/data/documentation/">College Scorecard API</a>, developed and hosted by the US Department of Education. This rich dataset contains thousands of variables on thousands of institutions, their students, and those students' outcomes. These data are collected through the annual IPEDS reports required of all institutions receiving Title IV aid funding for students (including Pell Grants, subsidized loans, and federal work-study).</p>
+
+	<h2>API Call</h2>
+	<p>The data were accessed through an API call programmed in Python using the json, requests, csv, and time packages. Due to the limitations of the College Scorecard API and the potential size of calls, two measures were implemented: the request was limited to one year (2013) and one state (California) and the call was slowed with the sleep command. The data pulled were stored in a CSV file for analysis.</p>
+
+	<h2>Analysis</h2>
+	<p>Results were produced using the statsmodels.api module of the pandas package for Python. As discussed more in depth in the <a href="/methodology">Methodology</a> and <a href="/results">Results</a> sections, an ordinary least squares regression was run on a number of independent variables to determine their effect on graduation rates.</p>
+</div>
+{% endblock %}

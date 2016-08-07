@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}Methodology{% endblock %}
+
+{% block content %}
+<div class="container">
+	<h1>Methodology</h1>
+	<hr />
+	<h2>Data</h2>
+	<p>This project used statistical regression to determine the impact of faculty part-time status on student graduation rates controlling for the percentage of students receiving low-income Pell Grants and the percentage of students who identify as white. Pell Grants are a useful stand-in for status as an indicator of low family income, due to federally mandated income thresholds below which students are eligible to receive these grants that do not have to be paid back. Other potential indicators of need, such as receipt of any Title IV aid, are complicated by the presence of loans, which many low-income students do not accept. Racial/ethnic identity was chosen as another independent variable due to its association with graduation rates - <a href="http://www.newsweek.com/why-minority-students-dont-graduate-college-75143">white students graduate at higher rates than students of color</a>, which has the potential to confound the effects on faculty and Pell status if uncontrolled for.</p>
+
+	<h2>Statistical Method</h2>
+	<p>This project estimates effects using linear, or ordinary least squares, regression. Regression is a statistical tool used to estimate the effect of one or more variables on a dependent or outcome variable. In mathematical terms, this regression estimates <a href="http://www.stat.yale.edu/Courses/1997-98/101/linreg.htm">"the best-fitting line for the observed data by minimizing the sum of the squares of the vertical deviations from each data point to the line"</a>. Results from this regression provide coefficients, or estimates of the impact of a one-unit increase in an independent variable on the outcome of interest. This project used multiple linear regression, which provides coefficients for the impact of a one-unit increase controlling for the other variables (that is, holding them constant).</p>
+
+{% endblock %}

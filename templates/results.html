@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %}Results{% endblock %}
+
+{% block content %}
+<div class="container">
+	<h1>Results</h1>
+	<hr />
+
+	<h2>Regression Output</h2>
+	<p>The Python script returned the following linear regression formula:
+		<blockquote>graduation rate = .2528 + .0632(percentage of white students) + .1777(percent of full-time faculty) -.3133(percent of students receiving Pell Grants)</blockquote>
+	The first number, or the constant, is the expected graduation rate (25.28%) of a college with no white students, no full-time faculty, and no students receiving Pell Grants. This is not a realistic constant but an important starting point for the formula. The coefficients on the independent variables are the effect of that variable on the graduation rate when holding the other independent variables constant. For example, considering two schools with the same percentage of full-time faculty and Pell recipients, a one-unit increase in the percentage of white students would increase the graduation rate by 6.32%. Of the three independent variables considered in this regression, only the increased presence of Pell recipients has a negative effect on the graduation rate. 		
+	</p>
+
+	<h2>Discussion</h2>
+	<p>The regression results suggest a positive influence of full-time faculty on graduation rates, Pell recipients and white student percentages being equal. However, when performing statistical analyses, the most important consideration in whether to accept or reject the null hypothesis (in this case, the null hypothesis is that an increase in full-time faculty does not have a positive impact on graduation rates) is the presence or absence of statistical significance. Simply put, statistical significance is measured using a standard threshold, either 5% or 10% - this means that the chance the non-zero coefficient is random is less than 5% or 10%.</p>
+
+	<p>The independent variable of interest, percent of full-time faculty, is not significant at either of the conventional levels. This means that while it may have some positive influence, it is not statistically possible to separate the magnitude of this influence from zero. Clearly, more research will need to be done in this field, and a variety of methods are suitable for further investigation, including regression discontinuity studies (looking at schools above and below a certain threshold of full-time faculty) and longitudinal studies (examining one school over time as its faculty composition changes).</p>
+</div>
+
+{% endblock %}
